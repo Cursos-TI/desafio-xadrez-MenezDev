@@ -1,19 +1,15 @@
 #include <stdio.h>
 
-// Desafio de Xadrez - MateCheck
-// O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
-// Nível Novato - Movimentação das Peças
-
 int main ()
 {
-
+    
     int i; //Variável i para se usar nas repetições
 
     printf("Primeira peça: Rainha\n");
     //Movimentos da Rainha, 8 casas para a esquerda de acordo com o desafio ní­vel novato
-    for (i = 1; i <= 8; i++)
+    for (i = 0; i < 8; i++)
     {
-        printf("%d° - Movimento Rainha = Esquerda\n", i);
+        printf("Movimento Rainha = Esquerda\n");
     }
 
     printf("\nSegunda peça: Torre\n");
@@ -22,7 +18,7 @@ int main ()
     i = 1;
     while (i <= 5)
     {
-        printf("%d° - Movimento Torre = Direita\n", i);
+        printf("Movimento Torre = Direita\n");
         i++;
     }
     
@@ -32,9 +28,26 @@ int main ()
     i = 1;
     do
     {
-        printf("%d° - Movimento Bispo = Cima, Direita\n", i);
+        printf("Movimento Bispo = Cima, Direita\n");
         i++;
     } while (i <= 5);
+
+    printf("\n-----------------------------------------------\n");
+    printf("\nQuarta peça: Cavalo\n");
+    //Movimentos Cavalo, 2 casas para baixo e 1 para esquerda
+
+    int movimentoCavalo = 1;
+
+    while (movimentoCavalo--)// decrementar a variável e se tornar 0 e parar o while
+    {
+        for (i = 0; i < 2; i++)
+        {
+            printf("Movimento Cavalo = Baixo\n");
+        }
+        
+        printf("Movimento Cavalo = Esquerda\n");
+    }
+    
     
     return 0;
 }
